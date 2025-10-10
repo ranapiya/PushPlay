@@ -25,11 +25,12 @@ export default async function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <title>OmniCollect - All your NFTs. One Home.</title>
+     <title>PushPlay - The Universal On-Chain Game on Push Chain</title>
         <meta
-          name="description"
-          content="See NFTs from Ethereum, Solana, Base and more — no chain switching."
-        />
+    name="description"
+    content="PushPlay is a cross-chain on-chain memory game built on Push Chain. Flip, match, and earn — no chain switching, no gas confusion, just pure universal gameplay."
+  />
+   <link rel="icon" href="/logo.png" type="image/png" />
       </head>
       <body className={inter.className}>
         <ContextProvider cookies={cookies}>

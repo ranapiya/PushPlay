@@ -24,22 +24,28 @@ export default function Header({ onHomeClick }: HeaderProps) {
     <header className="fixed top-0 left-0 right-0 z-50 glass border-b border-border/40">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center space-x-2 group">
-            <div className="w-8 h-8 rounded-lg gradient-primary flex items-center justify-center text-white font-bold text-sm group-hover:scale-105 smooth-transition">
-              OC
-            </div>
-            <span className="font-semibold text-lg hidden sm:inline-block">OmniCollect</span>
+          <Link 
+          onClick={onHomeClick}
+          href="/" className="flex items-center space-x-2 group">
+            <Image
+             src={"/logo.png"}
+             alt={"PlayPush"}
+             height={30}
+             width={30}
+             className="object-cover rounded-full"
+                     />
+            <span className="font-semibold text-lg hidden sm:inline-block">PushPlay</span>
           </Link>
 
           <nav className="hidden md:flex items-center space-x-8">
             <Link href="/#features" className="text-sm font-medium text-muted-foreground hover:text-foreground smooth-transition">
               Features
             </Link>
-            <Link href="/#how-it-works" className="text-sm font-medium text-muted-foreground hover:text-foreground smooth-transition">
-              How it Works
+            <Link href="/" className="text-sm font-medium text-muted-foreground hover:text-foreground smooth-transition">
+              How to play
             </Link>
-            <Link href="/dashboard" className="text-sm font-medium text-muted-foreground hover:text-foreground smooth-transition">
-              Dashboard
+            <Link href="/" className="text-sm font-medium text-muted-foreground hover:text-foreground smooth-transition">
+              Playground
             </Link>
           </nav>
 

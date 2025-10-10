@@ -11,8 +11,9 @@ import { useGameLogic } from "./useGameLogic";
 import { useSubmitScore } from "@/hooks/useSubmitScore";
 import { toast } from "sonner";
 import GameRules from "../GameRules";
-
+import { ConfettiSideCannons } from "../ConfettiSideCannons";
 export default function GameBoard({ onBackToHome }: { onBackToHome: () => void }) {
+  
   // Stable card symbols to prevent re-renders
   const cardSymbols = useMemo(
     () => [
@@ -140,10 +141,15 @@ export default function GameBoard({ onBackToHome }: { onBackToHome: () => void }
 
 
 
+
+
   return (
-    <div className="max-w-4xl mx-auto space-y-12 relative">
-      <h2 className="text-5xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-pink-400">
-        Game Arena
+    <div className="max-w-4xl mx-auto space-y-12 relative pt-24 pb-24">
+      <ConfettiSideCannons trigger={gameCompleted} />
+       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
+      <h2 className="text-5xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-cyan-500 ">
+       PlayPush On-Chain Arena 
       </h2>
 
       {fakeSuccessMsg && (
@@ -258,7 +264,7 @@ export default function GameBoard({ onBackToHome }: { onBackToHome: () => void }
               placeholder="Your name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full px-4 py-2 border rounded-lg mb-4 text-black"
+              className="w-full px-4 py-2 border rounded-lg mb-4 text-black bg-white"
             />
             <div className="flex justify-end space-x-3">
               <button

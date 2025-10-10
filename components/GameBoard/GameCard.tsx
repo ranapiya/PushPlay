@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
-import { Square } from "lucide-react";
+import { Club, Square } from "lucide-react";
 
 export default function GameCard({ card, onClick }: { card: any; onClick: () => void }) {
   return (
@@ -26,8 +26,8 @@ export default function GameCard({ card, onClick }: { card: any; onClick: () => 
             className="object-cover"
           />
         ) : (
-          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-cyan-400/10 to-blue-400/10 rounded-xl">
-            <Square className="w-10 h-10 text-white/20" />
+          <div className="w-full h-full flex items-center justify-center  rounded-xl">
+            <Club className="w-5 h-5 text-cyan-500" />
           </div>
         )}
         <div className="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-0 hover:opacity-100 rounded-2xl pointer-events-none" />
