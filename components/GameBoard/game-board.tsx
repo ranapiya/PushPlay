@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useMemo } from "react";
+import {useState, useMemo } from "react";
 import GameStats from "./GameStats";
 import GameGrid from "./GameGrid";
 import GameControls from "./GameControls";

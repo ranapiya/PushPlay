@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
-import { Club, Square } from "lucide-react";
+import { Club} from "lucide-react";
 
 export default function GameCard({ card, onClick }: { card: any; onClick: () => void }) {
   return (

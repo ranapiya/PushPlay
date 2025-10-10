@@ -1,27 +1,37 @@
 'use client';
 
-import { Layers, Shield, Zap, Globe } from 'lucide-react';
+import { Brain, Zap, Trophy, Users, Globe, Shield } from 'lucide-react';
 
-const FEATURES = [
+const GAME_FEATURES = [
   {
-    icon: Layers,
-    title: 'Multi-Chain Support',
-    description: 'View NFTs from Ethereum, Solana, Base, Polygon, and more - all in one place.'
-  },
-  {
-    icon: Shield,
-    title: 'Secure & Private',
-    description: 'Your wallet stays in your control. We never ask for private keys or seed phrases.'
+    icon: Brain,
+    title: 'Cognitive Mastery',
+    description: 'Challenge your mind with unique cards that test memory and adaptability in dynamic arenas.'
   },
   {
     icon: Zap,
-    title: 'Lightning Fast',
-    description: 'Instant sync and blazing-fast load times. No waiting, no chain switching.'
+    title: 'Lightning Reflexes',
+    description: 'Race against the clock to secure leaderboard glory with pixel-perfect precision and speed.'
+  },
+  {
+    icon: Trophy,
+    title: 'On-Chain Champions',
+    description: 'Connect your wallet and etch your name in memory history—secured on-chain for all to admire.'
+  },
+  {
+    icon: Users,
+    title: 'Skill-Based Progression',
+    description: 'Level up by mastering each arena, unlock achievements, and climb the global leaderboard.'
   },
   {
     icon: Globe,
-    title: 'Universal Access',
-    description: 'Access your collection from any device, anywhere. Always up-to-date.'
+    title: 'Dynamic Arenas',
+    description: 'Play in beautifully crafted arenas with smooth animations and responsive gameplay.'
+  },
+  {
+    icon: Shield,
+    title: 'Secure & Gasless',
+    description: 'Enjoy safe matchmaking and gasless matches while your wallet stays in control.'
   }
 ];
 
@@ -29,18 +39,19 @@ export function Features() {
   return (
     <section id="features" className="py-24 sm:py-32 relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
-            Everything you need to{' '}
-            <span className="gradient-text">manage your NFTs</span>
+            Where memory meets mastery in the ultimate <span className="gradient-text">card-matching challenge</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            The most comprehensive NFT portfolio manager, built for collectors who demand the best.
+            Step into an elegant playground of cognitive challenges. Test your memory, compete with players worldwide, and claim your place among the champions in this beautifully crafted Web3 experience.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {FEATURES.map((feature, index) => (
+        {/* Features Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {GAME_FEATURES.map((feature, index) => (
             <div
               key={index}
               className="glass rounded-2xl p-8 hover-lift hover:border-primary/50 smooth-transition group"

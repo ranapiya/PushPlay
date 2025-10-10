@@ -3,29 +3,29 @@
 import { Button } from '@/components/ui/button';
 import { Wallet, ArrowRight, Play } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import { TrustSection } from "@/components/trust-section";
+import { GameHighlightsSection } from "@/components/trust-section";
 import { Features } from "@/components/features";
 import { HowItWorks } from "@/components/how-it-works";
 import { CTASection } from "@/components/cta-section";
 
-const SAMPLE_NFTS = [
+const SAMPLE_CARDS = [
   {
     id: 1,
-    name: 'Cosmic Voyager #4251',
+    name: 'Flip Card',
     image: 'https://images.pexels.com/photos/2422915/pexels-photo-2422915.jpeg?auto=compress&cs=tinysrgb&w=600',
-    chain: 'Ethereum',
+    
   },
   {
     id: 2,
-    name: 'Digital Dreams #789',
+    name: 'Swap Card',
     image: 'https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&w=600',
-    chain: 'Solana',
+    
   },
   {
     id: 3,
-    name: 'Abstract Genesis #156',
+    name: 'On Chain Card',
     image: 'https://images.pexels.com/photos/1616403/pexels-photo-1616403.jpeg?auto=compress&cs=tinysrgb&w=600',
-    chain: 'Base',
+    
   },
 ];
 
@@ -34,7 +34,7 @@ export default function LandingPage({ onStartGame }: { onStartGame: () => void }
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % SAMPLE_NFTS.length);
+      setActiveIndex((prev) => (prev + 1) % SAMPLE_CARDS.length);
     }, 3000);
     return () => clearInterval(interval);
   }, []);
@@ -53,11 +53,11 @@ export default function LandingPage({ onStartGame }: { onStartGame: () => void }
             <div className="text-center lg:text-left space-y-8">
               <div className="space-y-4">
                 <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight">
-                  All your NFTs.{' '}
-                  <span className="gradient-text">One Home.</span>
+                  PushPlay <span className="gradient-text">On Chain Arena</span>
                 </h1>
                 <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0">
-                  See NFTs from Ethereum, Solana, Base and more — no chain switching.
+                  Flip, match, and win on Push Chain — the universal cross-chain on-chain game.
+                  Deploy once, play anywhere, no chain switching required.
                 </p>
               </div>
 
@@ -90,7 +90,7 @@ export default function LandingPage({ onStartGame }: { onStartGame: () => void }
                   ))}
                 </div>
                 <div className="text-sm text-muted-foreground">
-                  <span className="font-semibold text-foreground">2,500+</span> collectors
+                  <span className="font-semibold text-foreground">200+</span> On Push Chain Players
                 </div>
               </div>
             </div>
@@ -98,9 +98,9 @@ export default function LandingPage({ onStartGame }: { onStartGame: () => void }
             {/* 🪞 NFT Carousel */}
             <div className="relative h-[500px] lg:h-[600px]">
               <div className="absolute inset-0 flex items-center justify-center perspective-1000">
-                {SAMPLE_NFTS.map((nft, index) => {
-                  const offset = (index - activeIndex + SAMPLE_NFTS.length) % SAMPLE_NFTS.length;
-                  const zIndex = SAMPLE_NFTS.length - Math.abs(offset);
+                {SAMPLE_CARDS.map((nft, index) => {
+                  const offset = (index - activeIndex + SAMPLE_CARDS.length) % SAMPLE_CARDS.length;
+                  const zIndex = SAMPLE_CARDS.length - Math.abs(offset);
                   const scale = offset === 0 ? 1 : 0.85 - Math.abs(offset) * 0.1;
                   const translateX = offset * 120;
                   const opacity = offset === 0 ? 1 : 0.5;
@@ -124,9 +124,6 @@ export default function LandingPage({ onStartGame }: { onStartGame: () => void }
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                           <div className="absolute bottom-0 left-0 right-0 p-6 space-y-2">
-                            <div className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-white/20 backdrop-blur-sm text-white">
-                              {nft.chain}
-                            </div>
                             <h3 className="text-xl font-semibold text-white">{nft.name}</h3>
                           </div>
                         </div>
@@ -141,7 +138,6 @@ export default function LandingPage({ onStartGame }: { onStartGame: () => void }
       </section>
 
       {/* 🧩 OTHER SECTIONS - stack vertically */}
-      <TrustSection />
       <Features />
       <HowItWorks />
       <CTASection />
