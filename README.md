@@ -1,6 +1,6 @@
-# 🧠 Memory Arena
+# 🧠 PushPlay
 
-A **Web3-powered** memory card game where strategy meets speed. **Memory Arena** blends the fun of a classic flip-and-match memory game with a futuristic UI, smooth animations, and on-chain reward potential.  
+A **Web3-powered** memory card game where strategy meets speed. **PushPlay** blends the fun of a classic flip-and-match memory game with a futuristic UI, smooth animations, and on-chain reward potential.  
 
 Designed with **Next.js**, **TailwindCSS**, **Framer Motion**, and prepared for blockchain integration using **wagmi** and **viem**.  
 
@@ -8,14 +8,14 @@ Designed with **Next.js**, **TailwindCSS**, **Framer Motion**, and prepared for 
 
 ## 🌐 Live Demo
 
-🔗 **Play Now** → [https://memory-arena-ruby.vercel.app](https://memory-arena-ruby.vercel.app)
+🔗 **Play Now** → [https://push-play.vercel.app/](https://push-play.vercel.app/)
 
 ---
 
 ## 🎮 About the Game
 
-**Memory Arena** is a sleek, responsive, and interactive memory card game where players test their short-term memory and reflexes.  
-Built for the **Somnia Mini-Games Hackathon**, it combines a modern glassmorphic design with competitive gameplay and future blockchain-enabled rewards.  
+**PushPlay** is a sleek, responsive, and interactive memory card game where players test their short-term memory and reflexes.  
+Built for the **PushPlay Hackathon**, it combines a modern glassmorphic design with competitive gameplay and future blockchain-enabled rewards.  
 
 ---
 
@@ -71,7 +71,7 @@ Built for the **Somnia Mini-Games Hackathon**, it combines a modern glassmorphic
 Clone and run locally:
 
 ```bash
-git clone https://github.com/yourusername/memory-arena.git
-cd memory-arena
+git clone https://github.com/ranapiya/PushPlay
+cd PushPlay
 npm install
 npm run dev

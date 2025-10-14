@@ -178,8 +178,8 @@ export default function GameBoard({ onBackToHome }: { onBackToHome: () => void }
       </div>
 
       <GameStats time={time} moves={moves} matchedPairs={matchedPairs} />
-
       <GameGrid cards={cards} onCardClick={handleCardClick} CardComponent={GameCard} />
+
 
       <GameControls
         isGameActive={isGameActive}

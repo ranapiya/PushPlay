@@ -38,7 +38,7 @@ const GAME_FEATURES = [
 export function Features() {
   return (
     <section id="features" className="py-24 sm:py-32 relative">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 bg-black">
         {/* Header */}
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
@@ -50,7 +50,7 @@ export function Features() {
         </div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 7">
           {GAME_FEATURES.map((feature, index) => (
             <div
               key={index}
