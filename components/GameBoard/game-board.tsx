@@ -17,8 +17,8 @@ export default function GameBoard({ onBackToHome }: { onBackToHome: () => void }
   // Stable card symbols to prevent re-renders
   const cardSymbols = useMemo(
     () => [
-      "/giyu.jpeg", "/muc.jpeg", "/ren.jpeg", "/siz.jpeg",
-      "/t.jpeg", "/tan.jpeg", "/uzi.jpeg", "/zen.jpeg"
+      "/8.jpeg", "/1.jpg", "/2.jpg", "/3.jpg",
+      "/4.jpg", "/5.jpg", "/6.jpg", "/7.jpg"
     ],
     []
   );
@@ -113,10 +113,7 @@ export default function GameBoard({ onBackToHome }: { onBackToHome: () => void }
 
 
   const handleStart = () => {
-    if (!isConnected) {
-      setShowWalletPopup(true);
-      return;
-    }
+   
     setIsGameActive(true);
   };
 
