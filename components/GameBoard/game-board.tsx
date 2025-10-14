@@ -17,8 +17,8 @@ export default function GameBoard({ onBackToHome }: { onBackToHome: () => void }
   // Stable card symbols to prevent re-renders
   const cardSymbols = useMemo(
     () => [
-      "/giyu.jpeg", "/muc.jpeg", "/ren.jpeg", "/siz.jpeg",
-      "/t.jpeg", "/tan.jpeg", "/uzi.jpeg", "/zen.jpeg"
+      "/giyu.jpeg", "/muc.jpeg", "/gojo.jpeg", "/luf.jpeg",
+      "/geto.jpeg", "/tan.jpeg", "/uzi.jpeg", "/zen.jpeg"
     ],
     []
   );
@@ -113,10 +113,6 @@ export default function GameBoard({ onBackToHome }: { onBackToHome: () => void }
 
 
   const handleStart = () => {
-    if (!isConnected) {
-      setShowWalletPopup(true);
-      return;
-    }
     setIsGameActive(true);
   };
 
@@ -182,7 +178,6 @@ export default function GameBoard({ onBackToHome }: { onBackToHome: () => void }
 
       <GameStats time={time} moves={moves} matchedPairs={matchedPairs} />
 
-      <GameGrid cards={cards} onCardClick={handleCardClick} CardComponent={GameCard} />
 
       <GameControls
         isGameActive={isGameActive}
@@ -192,6 +187,7 @@ export default function GameBoard({ onBackToHome }: { onBackToHome: () => void }
         onReset={initializeGame}
         onHome={onBackToHome}
       />
+      <GameGrid cards={cards} onCardClick={handleCardClick} CardComponent={GameCard} />
 
       {gameCompleted && (
         <GameCompleted
