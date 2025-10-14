@@ -113,6 +113,7 @@ export default function GameBoard({ onBackToHome }: { onBackToHome: () => void }
 
 
   const handleStart = () => {
+    
     setIsGameActive(true);
   };
 
@@ -177,6 +178,7 @@ export default function GameBoard({ onBackToHome }: { onBackToHome: () => void }
       </div>
 
       <GameStats time={time} moves={moves} matchedPairs={matchedPairs} />
+      <GameGrid cards={cards} onCardClick={handleCardClick} CardComponent={GameCard} />
 
 
       <GameControls
@@ -187,7 +189,6 @@ export default function GameBoard({ onBackToHome }: { onBackToHome: () => void }
         onReset={initializeGame}
         onHome={onBackToHome}
       />
-      <GameGrid cards={cards} onCardClick={handleCardClick} CardComponent={GameCard} />
 
       {gameCompleted && (
         <GameCompleted
