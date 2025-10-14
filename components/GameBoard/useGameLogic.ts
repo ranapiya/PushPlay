@@ -48,7 +48,7 @@ export const useGameLogic = (cardSymbols: string[]) => {
 
   // Game completion (dynamic pairs)
   useEffect(() => {
-    if (matchedPairs === cardSymbols.length*2) {
+    if (matchedPairs === cardSymbols.length) {
       setIsGameActive(false)
       setGameCompleted(true)
     }

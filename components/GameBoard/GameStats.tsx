@@ -10,7 +10,7 @@ export default function GameStats({ time, moves, matchedPairs }: { time: number;
         <span className="text-white font-medium">{formatTime(time)}</span>
       </div>
       <div className="text-amber-400 font-medium">Moves: {moves}</div>
-      <div className="text-emerald-400 font-medium">Pairs: {matchedPairs-1}/8</div>   {/*-------------------- */}
+      <div className="text-emerald-400 font-medium">Pairs: {matchedPairs}/8</div>   {/*-------------------- */}
     </div>
   )
 }

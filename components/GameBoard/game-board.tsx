@@ -84,7 +84,7 @@ export default function GameBoard({ onBackToHome }: { onBackToHome: () => void }
           // ✅ Update matchedPairs and check completion
           setMatchedPairs((prev) => {
             const newCount = prev + 1;
-            const totalPairs = cardSymbols.length*2; // 8 in your case
+            const totalPairs = cardSymbols.length; // 8 in your case
             if (newCount === totalPairs) {
               setIsGameActive(false);
               // small delay before marking completed (optional)
