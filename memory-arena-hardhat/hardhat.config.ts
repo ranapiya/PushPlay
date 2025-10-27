@@ -8,9 +8,10 @@ dotenv.config();
 const config: HardhatUserConfig = {
   solidity: "0.8.24",
   networks: {
-    somnia: {
-      url: process.env.RPC_URL || "",
-      accounts: [process.env.PRIVATE_KEY!],
+    pushChainDonut: {
+      url: process.env.PUSH_RPC_URL || "https://evm.rpc-testnet-donut-node1.push.org/",
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+      chainId: 42101,
     },
   },
 };

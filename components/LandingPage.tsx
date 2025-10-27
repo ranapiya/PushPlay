@@ -1,12 +1,11 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import { Wallet, ArrowRight, Play } from 'lucide-react';
+import { ArrowRight, Play } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import { GameHighlightsSection } from "@/components/trust-section";
-import { Features } from "@/components/features";
-import { HowItWorks } from "@/components/how-it-works";
-import { CTASection } from "@/components/cta-section";
+
+import { HeroParallaxDemo } from './HeroParallaxDemo';
+
 
 const SAMPLE_CARDS = [
   {
@@ -42,6 +41,7 @@ export default function LandingPage({ onStartGame }: { onStartGame: () => void }
   return (
     <>
       {/* 🟣 HERO SECTION */}
+      <HeroParallaxDemo/>
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
         <div className="absolute inset-0 bg-black" />
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse" />
@@ -51,15 +51,7 @@ export default function LandingPage({ onStartGame }: { onStartGame: () => void }
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* 🧠 Text Section */}
             <div className="text-center lg:text-left space-y-8">
-              <div className="space-y-4">
-                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight">
-                  PushPlay <span className="gradient-text">On Chain Arena</span>
-                </h1>
-                <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0">
-                  Flip, match, and win on Push Chain — the universal cross-chain on-chain game.
-                  Deploy once, play anywhere, no chain switching required.
-                </p>
-              </div>
+             
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button
@@ -136,11 +128,6 @@ export default function LandingPage({ onStartGame }: { onStartGame: () => void }
           </div>
         </div>
       </section>
-
-      {/* 🧩 OTHER SECTIONS - stack vertically */}
-      <Features />
-      <HowItWorks />
-      <CTASection />
     </>
   );
 }
