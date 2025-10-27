@@ -5,7 +5,7 @@ const GameRules = () => {
   return (
     <div className="max-w-3xl mx-auto p-6 backdrop-blur-lg rounded-2xl shadow-lg border border-gray-200">
       <h1 className="text-3xl font-extrabold text-center text-indigo-600 mb-6">
-        🧠 Memory Arena – How to Play
+        🧠 PlayPush – How to Play
       </h1>
 
       <section className="mb-6">
